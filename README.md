@@ -13,9 +13,3 @@ Interactive Elements: Sticky navigation bar, styled donation amount cards, and c
 HTML5: Semantic document structure.
 CSS3: Custom styling, Flexbox layout, and media queries for responsiveness.
 
-📂 Project Structure
-
-├── index.html       # Main HTML structure
-├── style.css        # Styling and layout rules
-└── README.md        # Project documentation
-
