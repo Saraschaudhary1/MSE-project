@@ -1,0 +1,445 @@
+/* Remove default browser spacing so we control everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   /* width includes padding and border */
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ---------------------------------------------------------
+   2. NAVIGATION BAR
+   --------------------------------------------------------- */
+
+.navbar {
+  position: sticky;          /* stays at the top while scrolling */
+  top: 0;
+  z-index: 10;               /* keeps it above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Orange logo box */
+.logo-box {
+  padding: 10px 20px;
+  background-color: #f9a11b;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-links a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Dark highlight for hovered and active menu links */
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   3. BUTTONS
+   --------------------------------------------------------- */
+
+/* Shared style for all buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-orange {
+  background-color: #f9a11b;
+  color: #ffffff;
+}
+
+.btn-orange:hover {
+  background-color: #e08c0a;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.btn-white:hover {
+  background-color: #eeeeee;
+}
+
+.btn-dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background-color: #000000;
+}
+
+
+/* ---------------------------------------------------------
+   4. HERO
+   --------------------------------------------------------- */
+
+.hero {
+  padding: 140px 6%;
+  color: #ffffff;
+  /* Dark layer (60% black) on top of the photo so text is readable.
+     If the photo is missing, the dark colour below is shown. */
+  background-color: #222222;
+  background-image: url("/Hero\ Image\ 2.png");
+  background-size: cover;       /* photo fills the whole area */
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 3.6rem;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 520px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   5. COMMON SECTION STYLES
+   Used by almost every section of the page.
+   --------------------------------------------------------- */
+
+.section {
+  padding: 70px 6%;
+  text-align: center;
+}
+
+/* Light grey background for alternate sections */
+.grey-bg {
+  background-color: #f4f4f4;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.section-text {
+  max-width: 650px;
+  margin: 0 auto 36px;
+}
+
+/* A row places boxes side by side and wraps on small screens */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   6. ABOUT, CAUSES, HOW WE WORK, IMPACT
+   --------------------------------------------------------- */
+
+/* About: photo on the left, text on the right */
+.about-row {
+  align-items: center;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.about-photo {
+  flex: 1 1 380px;
+  max-width: 520px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-text {
+  flex: 1 1 380px;
+}
+
+.about-text h3 {
+  margin-top: 14px;
+  color: #f9a11b;
+}
+
+/* Cause cards */
+.card {
+  flex: 1 1 220px;
+  padding: 26px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Numbered steps in "How We Start an Initiative" */
+.step {
+  flex: 1 1 220px;
+  padding: 26px;
+  background-color: #fff8ec;
+  border-top: 5px solid #f9a11b;
+  border-radius: 8px;
+}
+
+/* Round orange circle that holds the step number */
+.step-number {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background-color: #f9a11b;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 46px;       /* centres the number vertically */
+}
+
+/* Impact numbers on a dark background */
+.impact {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.impact .section-title {
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.stat {
+  flex: 1 1 180px;
+}
+
+.stat h2 {
+  font-size: 2.6rem;
+  color: #f9a11b;
+}
+
+
+/* ---------------------------------------------------------
+   7. GALLERY
+   --------------------------------------------------------- */
+
+.photo-box {
+  flex: 1 1 30%;           /* about three photos per row */
+  min-width: 260px;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;       /* crops the photo neatly, no stretching */
+  border-radius: 8px;
+}
+
+.photo-box p {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------
+   8. DONATE
+   --------------------------------------------------------- */
+
+.donate {
+  padding: 80px 6%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #222222;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                    url("images/donate.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.donate .section-title {
+  color: #ffffff;
+}
+
+/* Each donation amount looks like a clickable card */
+.amount {
+  flex: 1 1 200px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f9a11b;
+}
+
+.amount span {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #555555;
+}
+
+.amount:hover {
+  background-color: #f9a11b;
+  color: #ffffff;
+}
+
+.amount:hover span {
+  color: #ffffff;
+}
+
+.small-note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+
+/* ---------------------------------------------------------
+   9. VOLUNTEER FORM, TESTIMONIALS, CONTACT
+   --------------------------------------------------------- */
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form label {
+  display: block;          /* label sits above the input */
+  margin: 14px 0 6px;
+  font-weight: bold;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form button {
+  margin-top: 20px;
+}
+
+/* White box used for testimonials and contact details */
+.box {
+  flex: 1 1 280px;
+  padding: 26px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.box h3 {
+  margin-bottom: 8px;
+  color: #f9a11b;
+}
+
+.person {
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+
+/* ---------------------------------------------------------
+   10. FOOTER
+   --------------------------------------------------------- */
+
+.footer {
+  padding: 40px 6%;
+  text-align: center;
+  background-color: #1c1c1c;
+  color: #cccccc;
+}
+
+.footer h3 {
+  color: #ffffff;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 16px 0;
+}
+
+.footer-links a:hover {
+  color: #f9a11b;
+}
+
+.copyright {
+  font-size: 0.85rem;
+}
+
+
+/* ---------------------------------------------------------
+   11. MOBILE SCREENS
+   These rules apply only when the screen is 768px or narrower.
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  /* Hide the menu links; keep the logo and Donate Now button */
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 90px 6%;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Stack the hero buttons one below the other */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
